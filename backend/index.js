@@ -6,7 +6,7 @@ const PORT = 3333;
 
 app.use(express.urlencoded({ extended: false }));
 
-app.use(cors());
+app.use(cors({origin: true, credentials: true}));
 
 app.use(require('./routes'));
 
